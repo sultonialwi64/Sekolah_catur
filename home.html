@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Move Chess Academy - Sekolah Catur Profesional</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        chess: {
+                            gold: '#D4AF37',
+                            dark: '#1a1a1a',
+                            light: '#f4f4f4',
+                            accent: '#3b82f6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-900 overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img src="asset/logo.jpeg" alt="Logo Sekolah Catur Wonosobo" class="w-12 h-12 rounded-full object-cover">
+                <span class="font-bold text-xl tracking-tighter uppercase">SEKOLAH CATUR<span class="text-chess-accent"> WONOSOBO</span></span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 items-center font-medium text-sm uppercase tracking-widest">
+                <a href="#home" class="hover:text-chess-accent transition">Beranda</a>
+                <a href="#program" class="hover:text-chess-accent transition">Kelas</a>
+                <a href="#keunggulan" class="hover:text-chess-accent transition">Mengapa Kami</a>
+                <a href="#kontak" class="bg-chess-dark text-white px-6 py-2 rounded hover:bg-chess-accent transition">Daftar</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-32 pb-20 bg-chess-light relative">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <h2 class="text-chess-accent font-bold tracking-[0.2em] uppercase text-sm mb-4">Membangun Strategi & Karakter</h2>
+                <h1 class="text-5xl lg:text-7xl font-bold text-chess-dark leading-tight mb-6">
+                    Jadilah <span class="italic">Grandmaster</span> Masa Depan
+                </h1>
+                <p class="text-lg text-gray-600 mb-8">
+                    Sekolah catur profesional untuk anak-anak dan remaja. Melatih logika, kesabaran, dan kemampuan mengambil keputusan di bawah tekanan.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#kontak" class="px-8 py-4 bg-chess-dark text-white font-bold rounded hover:bg-chess-accent transition">Gabung Sekarang</a>
+                    <a href="#program" class="px-8 py-4 border border-gray-300 font-bold rounded hover:bg-gray-100 transition">Lihat Kelas</a>
+                </div>
+            </div>
+            <div class="relative" data-aos="zoom-in">
+                <img src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&q=80&w=1000" alt="Chess Academy" class="rounded-2xl shadow-2xl">
+                <div class="absolute -bottom-6 -left-6 bg-white p-6 shadow-xl rounded-lg hidden md:block">
+                    <p class="text-chess-dark font-bold text-2xl">10+ (misal)</p>
+                    <p class="text-gray-500 text-sm">Juara Nasional</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="keunggulan" class="py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="text-center" data-aos="fade-up">
+                    <div class="text-4xl mb-4 text-chess-accent">🧠</div>
+                    <h3 class="font-bold text-xl mb-2">Melatih Logika</h3>
+                    <p class="text-gray-600">Catur membantu anak berpikir sistematis dan memecahkan masalah kompleks.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl mb-4 text-chess-accent">🏆</div>
+                    <h3 class="font-bold text-xl mb-2">Kurikulum Teruji</h3>
+                    <p class="text-gray-600">Materi dari dasar hingga strategi tingkat lanjut oleh pelatih berlisensi.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl mb-4 text-chess-accent">♟️</div>
+                    <h3 class="font-bold text-xl mb-2">Turnamen Rutin</h3>
+                    <p class="text-gray-600">Mengasah mental bertanding melalui kompetisi internal setiap bulan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="program" class="py-20 bg-chess-dark text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Pilihan Kelas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="border border-white/20 p-8 rounded-xl hover:bg-white/5 transition" data-aos="fade-up">
+                    <h4 class="text-chess-gold font-bold mb-2">Pawn Level</h4>
+                    <h3 class="text-2xl font-bold mb-4">Pemula (Basic)</h3>
+                    <ul class="text-gray-400 space-y-2 mb-8">
+                        <li>• Pengenalan Buah Catur</li>
+                        <li>• Aturan Dasar & Gerakan</li>
+                        <li>• Teknik Skakmat Dasar</li>
+                    </ul>
+                    <a href="#kontak" class="block text-center py-2 bg-white text-chess-dark font-bold rounded">Daftar</a>
+                </div>
+                <div class="border border-white/20 p-8 rounded-xl hover:bg-white/5" data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="text-chess-accent font-bold mb-2">Knight Level</h4>
+                    <h3 class="text-2xl font-bold mb-4">Menengah</h3>
+                    <ul class="text-gray-400 space-y-2 mb-8">
+                        <li>• Strategi Pembukaan</li>
+                        <li>• Taktik (Fork, Pin, Skewer)</li>
+                        <li>• Analisis Permainan</li>
+                    </ul>
+                    <a href="#kontak" class="block text-center py-2 bg-white text-chess-dark font-bold rounded">Daftar</a>
+                </div>
+             
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="py-20">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">Siap Melangkah?</h2>
+            <p class="text-gray-600 mb-10 text-lg">Daftarkan putra-putri Anda untuk kelas percobaan gratis hari ini.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/62xxxxxxxx" class="bg-green-600 text-white px-10 py-4 rounded-full font-bold shadow-lg hover:bg-green-700 transition flex items-center justify-center gap-2">
+                    Ajukan Pertanyaan
+                </a>
+            </div>
+            <br>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/62xxxxxxxx" class="bg-purple-600 text-white px-10 py-4 rounded-full font-bold shadow-lg hover:bg-green-700 transition flex items-center justify-center gap-2">
+                    Daftar Sekarang
+                </a>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="py-10 border-t border-gray-100 text-center text-gray-500 text-sm">
+        <p>&copy; 2026 Master Move Chess Academy. Indonesia.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true });
+    </script>
+</body>
+</html>
