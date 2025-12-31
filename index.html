@@ -30,20 +30,35 @@
 <body class="bg-white text-gray-900 overflow-x-hidden">
 
     <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
-        <div class="max-w-6xl mx-auto px-4 h-20 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <img src="asset/logo.jpeg" alt="Logo Sekolah Catur Wonosobo" class="w-12 h-12 rounded-full object-cover">
-                <span class="font-bold text-xl tracking-tighter uppercase">SEKOLAH CATUR<span class="text-chess-accent"> WONOSOBO</span></span>
-            </div>
-            
-            <div class="hidden md:flex space-x-8 items-center font-medium text-sm uppercase tracking-widest">
-                <a href="#home" class="hover:text-chess-accent transition">Beranda</a>
-                <a href="#program" class="hover:text-chess-accent transition">Kelas</a>
-                <a href="#keunggulan" class="hover:text-chess-accent transition">Mengapa Kami</a>
-                <a href="#kontak" class="bg-chess-dark text-white px-6 py-2 rounded hover:bg-chess-accent transition">Daftar</a>
-            </div>
+    <div class="max-w-6xl mx-auto px-4 h-20 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <img src="asset/logo.jpeg" alt="Logo" class="w-12 h-12 rounded-full object-cover">
+            <span class="font-bold text-xl tracking-tighter uppercase">SEKOLAH CATUR<span class="text-chess-accent"> WONOSOBO</span></span>
         </div>
-    </nav>
+        
+        <div class="hidden md:flex space-x-8 items-center font-medium text-sm uppercase tracking-widest">
+            <a href="#home" class="hover:text-chess-accent transition">Beranda</a>
+            <a href="#program" class="hover:text-chess-accent transition">Kelas</a>
+            <a href="#keunggulan" class="hover:text-chess-accent transition">Mengapa Kami</a>
+            <a href="#kontak" class="bg-chess-dark text-white px-6 py-2 rounded hover:bg-chess-accent transition">Daftar</a>
+        </div>
+
+        <div class="md:hidden">
+            <button id="menu-btn" class="text-chess-dark focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 flex flex-col p-4 space-y-4 font-medium uppercase text-sm tracking-widest">
+        <a href="#home" class="mobile-link hover:text-chess-accent transition">Beranda</a>
+        <a href="#program" class="mobile-link hover:text-chess-accent transition">Kelas</a>
+        <a href="#keunggulan" class="mobile-link hover:text-chess-accent transition">Mengapa Kami</a>
+        <a href="#kontak" class="mobile-link bg-chess-dark text-white text-center py-3 rounded">Daftar</a>
+    </div>
+</nav>
 
     <section id="home" class="pt-32 pb-20 bg-chess-light relative">
         <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -148,5 +163,22 @@
     <script>
         AOS.init({ once: true });
     </script>
+    <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    // Buka/Tutup Menu saat tombol diklik
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Tutup Menu otomatis saat salah satu link diklik
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+</script>
 </body>
 </html>
